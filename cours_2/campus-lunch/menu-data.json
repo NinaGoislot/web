@@ -1,0 +1,65 @@
+[
+  {
+    "day": "Monday",
+    "name": "Bibimbap",
+    "price": 6500,
+    "vegetarian": true,
+    "description": "Rice, vegetables, and gochujang."
+  },
+  {
+    "day": "Monday",
+    "name": "Chicken rice",
+    "price": 7000,
+    "vegetarian": false,
+    "description": "Grilled chicken with steamed rice."
+  },
+  {
+    "day": "Monday",
+    "name": "Tofu bowl",
+    "price": 6000,
+    "vegetarian": true,
+    "description": "Tofu, greens, and sesame dressing."
+  },
+  {
+    "day": "Tuesday",
+    "name": "Mushroom pasta",
+    "price": 7500,
+    "vegetarian": true,
+    "description": "Pasta with mushrooms and herbs."
+  },
+  {
+    "day": "Tuesday",
+    "name": "Beef noodles",
+    "price": 8000,
+    "vegetarian": false,
+    "description": "Noodles with beef and vegetables."
+  },
+  {
+    "day": "Tuesday",
+    "name": "Lentil soup",
+    "price": 5500,
+    "vegetarian": true,
+    "description": "Lentils with bread on the side."
+  },
+  {
+    "day": "Wednesday",
+    "name": "Fish rice",
+    "price": 7500,
+    "vegetarian": false,
+    "description": "Fish with rice and seasonal greens."
+  },
+  {
+    "day": "Wednesday",
+    "name": "Pork cutlet",
+    "price": 8000,
+    "vegetarian": false,
+    "description": "Breaded pork with cabbage salad."
+  },
+  {
+    "day": "Wednesday",
+    "name": "Chicken noodles",
+    "price": 7000,
+    "vegetarian": false,
+    "description": "Chicken and noodles in broth."
+  }
+]

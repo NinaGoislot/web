@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Lunch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Campus Lunch</h1>
+    <form id="day-form" style="margin-bottom:1.2rem;display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;max-width:320px;margin-left:auto;margin-right:auto;">
+      <label for="day-select" style="font-weight:500;">Day</label>
+      <select id="day-select" name="day" style="font-size:1rem;padding:0.3em 0.7em;border-radius:6px;border:1px solid #bbb;">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+      </select>
+    </form>
+    <div id="meal-count" style="text-align:center;font-size:1.05rem;margin-bottom:0.7rem;"></div>
+    <section id="meals"></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

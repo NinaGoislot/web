@@ -1,0 +1,67 @@
+body {
+  background: #fff;
+  color: #111;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem 0.5rem;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+#meals {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.meal-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.meal-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.meal-desc {
+  font-size: 1rem;
+  color: #444;
+}
+.meal-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.98rem;
+}
+.veg-label {
+  color: #388e3c;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  padding: 0.1em 0.5em;
+  background: #e0f2f1;
+  margin-left: 0.5em;
+}
+@media (max-width: 420px) {
+  main {
+    padding: 1rem 0.2rem;
+  }
+  .meal-card {
+    padding: 0.8rem 0.5rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+}
