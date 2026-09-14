@@ -7,18 +7,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Campus Lunch</h1>
-    <form id="day-form" style="margin-bottom:1.2rem;display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;max-width:320px;margin-left:auto;margin-right:auto;">
-      <label for="day-select" style="font-weight:500;">Day</label>
-      <select id="day-select" name="day" style="font-size:1rem;padding:0.3em 0.7em;border-radius:6px;border:1px solid #bbb;">
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-      </select>
-    </form>
-    <div id="meal-count" style="text-align:center;font-size:1.05rem;margin-bottom:0.7rem;"></div>
-    <section id="meals"></section>
+  <main class="campus-page">
+    <a class="back-link" href="../../index.html" aria-label="Return to the main project selection page">← Back to projects</a>
+
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Campus Dining</p>
+      <h1 id="page-title">Campus Lunch</h1>
+      <p class="hero-copy">
+        Browse the lunch menu by day and compare meals at a glance.
+      </p>
+    </section>
+
+    <section class="filter-panel" aria-label="Lunch day filters">
+      <div class="filter-tabs" role="tablist" aria-label="Select a day">
+        <button class="filter-tab" type="button" data-day="Monday" aria-pressed="true">Monday</button>
+        <button class="filter-tab" type="button" data-day="Tuesday" aria-pressed="false">Tuesday</button>
+        <button class="filter-tab" type="button" data-day="Wednesday" aria-pressed="false">Wednesday</button>
+        <button class="filter-tab" type="button" data-day="Thursday" aria-pressed="false">Thursday</button>
+        <button class="filter-tab" type="button" data-day="Friday" aria-pressed="false">Friday</button>
+        <button class="filter-tab" type="button" data-day="Saturday" aria-pressed="false">Saturday</button>
+      </div>
+      <div id="meal-count" class="meal-count" aria-live="polite"></div>
+    </section>
+
+    <section id="meals" class="meal-grid" aria-live="polite"></section>
   </main>
   <script src="app.js"></script>
 </body>

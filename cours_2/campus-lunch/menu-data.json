@@ -1,5 +1,4 @@
-[
-  {
+[{
     "day": "Monday",
     "name": "Bibimbap",
     "price": 6500,
@@ -61,5 +60,48 @@
     "price": 7000,
     "vegetarian": false,
     "description": "Chicken and noodles in broth."
+  },
+  {
+    "day": "Thursday",
+    "name": "Public holiday",
+    "price": 0,
+    "vegetarian": false,
+    "description": "No menu available.",
+    "closed": true
+  },
+  {
+    "day": "Friday",
+    "name": "Teriyaki burger",
+    "price": 7900,
+    "vegetarian": false,
+    "description": "Burger with teriyaki sauce, lettuce, and fries."
+  },
+  {
+    "day": "Friday",
+    "name": "Veggie wrap",
+    "price": 6200,
+    "vegetarian": true,
+    "description": "Fresh vegetables with hummus in a soft wrap."
+  },
+  {
+    "day": "Friday",
+    "name": "Rice bowl",
+    "price": 6800,
+    "vegetarian": false,
+    "description": "Rice bowl with grilled chicken and vegetables."
+  },
+  {
+    "day": "Saturday",
+    "name": "Brunch plate",
+    "price": 8200,
+    "vegetarian": true,
+    "description": "Eggs, toast, potatoes, and fresh fruit."
+  },
+  {
+    "day": "Saturday",
+    "name": "Chicken sandwich",
+    "price": 7600,
+    "vegetarian": false,
+    "description": "Crispy chicken sandwich with slaw and pickles."
   }
 ]
