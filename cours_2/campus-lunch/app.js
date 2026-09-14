@@ -116,9 +116,9 @@ function renderMeals(day) {
   const countDiv = document.getElementById("meal-count");
   countDiv.textContent = `${meals.length} meal${meals.length === 1 ? '' : 's'} available for ${day}`;
   if (meals.length === 0) {
-    mealsSection.innerHTML = holidayDays.has(day)
-      ? `<div class="empty-state is-holiday">${day} is a public holiday. No menu is listed.</div>`
-      : `<div class="empty-state">No meals available for ${day}.</div>`;
+    mealsSection.innerHTML = holidayDays.has(day) ?
+      `<div class="empty-state is-holiday">${day} is a public holiday. No menu is listed.</div>` :
+      `<div class="empty-state">No meals available for ${day}.</div>`;
     return;
   }
   mealsSection.innerHTML = meals.map(meal => `
