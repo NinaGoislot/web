@@ -63,54 +63,44 @@ const menu = [{
     description: "Chicken and noodles in broth."
   },
   {
-    day: "Thursday",
-    name: "Public holiday",
-    price: 0,
-    vegetarian: false,
-    description: "No menu available.",
-    closed: true
-  },
-  {
     day: "Friday",
-    name: "Teriyaki burger",
-    price: 7900,
+    name: "Classic burger",
+    price: 7800,
     vegetarian: false,
-    description: "Burger with teriyaki sauce, lettuce, and fries."
+    description: "Beef burger with lettuce, tomato, and fries."
   },
   {
     day: "Friday",
     name: "Veggie wrap",
     price: 6200,
     vegetarian: true,
-    description: "Fresh vegetables with hummus in a soft wrap."
+    description: "Roasted vegetables with hummus in a soft wrap."
   },
   {
     day: "Friday",
-    name: "Rice bowl",
-    price: 6800,
-    vegetarian: false,
-    description: "Rice bowl with grilled chicken and vegetables."
-  },
-  {
-    day: "Saturday",
-    name: "Brunch plate",
-    price: 8200,
-    vegetarian: true,
-    description: "Eggs, toast, potatoes, and fresh fruit."
-  },
-  {
-    day: "Saturday",
-    name: "Chicken sandwich",
+    name: "Chicken bowl",
     price: 7600,
     vegetarian: false,
-    description: "Crispy chicken sandwich with slaw and pickles."
+    description: "Seasoned chicken, rice, and crunchy vegetables."
+  },
+  {
+    day: "Saturday",
+    name: "Pasta salad",
+    price: 5900,
+    vegetarian: true,
+    description: "Cold pasta with tomatoes, olives, and herbs."
+  },
+  {
+    day: "Saturday",
+    name: "Grilled chicken plate",
+    price: 7900,
+    vegetarian: false,
+    description: "Grilled chicken with potatoes and greens."
   }
 ];
 
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const holidayDays = {
-  Thursday: "Public holiday"
-};
+const holidayDays = new Set(["Thursday"]);
 
 function setActiveTab(day) {
   document.querySelectorAll(".filter-tab").forEach(tab => {
@@ -121,18 +111,14 @@ function setActiveTab(day) {
 }
 
 function renderMeals(day) {
-  const meals = menu.filter(m => m.day === day && !m.closed);
-  const holidayLabel = holidayDays[day];
+  const meals = menu.filter(m => m.day === day);
   const mealsSection = document.getElementById("meals");
   const countDiv = document.getElementById("meal-count");
-  if (holidayLabel) {
-    countDiv.textContent = `${holidayLabel} — no menu listed`;
-    mealsSection.innerHTML = `<div class="empty-state holiday-state">${day} is a public holiday. No menu is listed.</div>`;
-    return;
-  }
   countDiv.textContent = `${meals.length} meal${meals.length === 1 ? '' : 's'} available for ${day}`;
   if (meals.length === 0) {
-    mealsSection.innerHTML = `<div class="empty-state">No meals available for ${day}.</div>`;
+    mealsSection.innerHTML = holidayDays.has(day)
+      ? `<div class="empty-state is-holiday">${day} is a public holiday. No menu is listed.</div>`
+      : `<div class="empty-state">No meals available for ${day}.</div>`;
     return;
   }
   mealsSection.innerHTML = meals.map(meal => `
