@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login Motion Lab</title>
+<script>
+  // Pick the theme before the first paint: saved choice first, then the system setting.
+  // Same key as THEME_KEY in src/theme.js.
+  var savedTheme = null
+  try { savedTheme = localStorage.getItem('login-motion-lab.theme.v1') } catch (e) {}
+  document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme
+    : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+</script>
+  <script type="module" crossorigin src="./assets/index-C9fYKlKz.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-K8DjAh20.css">
+</head><body><div id="app"></div></body></html>
